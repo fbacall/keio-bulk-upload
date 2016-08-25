@@ -121,8 +121,8 @@ def build_list(csv_file_name)
     index += 1
     form = {}
     begin
-      form['name'] = "#{row['JW_id']}_#{row['ECK number']}"
-      #form['unique_code'] = "SBC"
+      form['name'] = "#{row['Clone Catalog Number']}"
+#     form['unique_code'] = "#{index.to_s.rjust(5,'0')}"
       form['origin'] = build_comment(row)
       form['genotype'] = row['gene name']
       form['box_select'] = PLATE_TO_BOX_ID_MAP.fetch(row['Plate'].to_i)
