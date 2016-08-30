@@ -126,7 +126,7 @@ def build_list(csv_file_name)
       form['origin'] = build_comment(row)
       form['genotype'] = row['gene name']
       form['box_select'] = PLATE_TO_BOX_ID_MAP.fetch(row['Plate'].to_i)
-      form['box_details'] = "#{row['Row']}#{row['Col']}"
+      form['box_details'] = "#{row['Row']}#{row['Col']}," # Trailing comma is required!
       form['org'] = '1' # e-coli
       form['org2'] = '1' # e-coli
       form['keeper'] = '2' # Sandra
